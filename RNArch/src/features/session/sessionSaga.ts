@@ -1,7 +1,7 @@
 import {call, put, takeLatest} from 'redux-saga/effects';
 import {User} from 'entity/UserEntity';
 import {error, request, success} from './sessionSlice';
-import {authService} from 'services';
+import {authService, userService} from 'services';
 
 export enum SessionSagaActions {
   REQUEST_LOGIN = 'REQUEST_LOGIN',
@@ -14,8 +14,8 @@ export function* requestLogin() {
       username: 'admin',
       password: 'admin',
     });
-    console.log(`Token ${token}`);
-    let user: User = {id: 1, name: 'John Doe'};
+    console.log('Token', token);
+    const user: User = yield call(userService.getUser);
     yield put(success(user));
   } catch (e) {
     yield put(error('Error'));

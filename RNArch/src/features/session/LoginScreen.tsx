@@ -41,7 +41,7 @@ export const LoginScreen: React.FC = () => {
         <Button onPress={requestLogin}>{'Login'}</Button>
         <View style={styles.messageContainer}>
           <Text>{isLoading && 'Loading'} </Text>
-          <Text>{user && user.name}</Text>
+          <Text>{user && `${user.name} ${user.lastname}`}</Text>
           <Text>{error && error}</Text>
         </View>
       </Column>

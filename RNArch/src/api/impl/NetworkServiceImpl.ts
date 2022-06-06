@@ -1,5 +1,5 @@
 import {NetworkService} from 'api/NetworkService';
-import axios, {AxiosInstance, AxiosRequestConfig} from 'axios';
+import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 import {baseURL, headers} from '../config';
 
 export class NetworkServiceImpl implements NetworkService {
@@ -15,7 +15,7 @@ export class NetworkServiceImpl implements NetworkService {
   clearAccessToken(): void {
     delete this.client.defaults.headers.common.authorization;
   }
-  request<T>(config: AxiosRequestConfig): Promise<T> {
-    return this.client.request(config);
+  request<T>(config: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+    return this.client.request<T>(config);
   }
 }
