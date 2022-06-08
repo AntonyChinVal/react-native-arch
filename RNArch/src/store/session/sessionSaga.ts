@@ -1,5 +1,5 @@
 import {call, put, takeLatest} from 'redux-saga/effects';
-import {User} from 'entity/UserEntity';
+import {User} from 'entity/userEntity';
 import {error, request, success} from './sessionSlice';
 import {authService, userService} from 'services';
 

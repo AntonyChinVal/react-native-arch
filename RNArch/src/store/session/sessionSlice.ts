@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {User} from 'entity/UserEntity';
+import {User} from 'entity/userEntity';
 
 type SessionState = {isLoading: boolean; user?: User; error?: string};
 

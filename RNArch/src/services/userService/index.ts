@@ -1,5 +1,5 @@
 import {networkService} from 'api';
-import {User} from 'entity/UserEntity';
+import {User} from 'entity/userEntity';
 import {UserService} from 'services/userService/userService';
 
 export class UserServiceImpl implements UserService {
