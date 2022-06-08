@@ -1,2 +1,2 @@
-export {SplashScreen} from './splash/SplashScreen';
-export {LoginScreen} from './session/LoginScreen';
+export {SplashScreen} from './splash/splashScreen';
+export {LoginScreen} from './session/loginScreen';

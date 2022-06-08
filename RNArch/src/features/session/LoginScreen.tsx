@@ -3,16 +3,14 @@ import {useCallback} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Column, Input, Link, Button} from 'common/components';
-import {AppState} from 'store/Types';
 import {useDispatch, useSelector} from 'react-redux';
-import {SessionSagaActions} from './sessionSaga';
+import {SessionSagaActions} from 'store/session/sessionSaga';
+import {selectSession} from 'store/session/sessionSelectors';
 
 export const LoginScreen: React.FC = () => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const {isLoading, user, error} = useSelector(
-    (appState: AppState) => appState.session,
-  );
+  const {isLoading, user, error} = useSelector(selectSession);
   const dispatch = useDispatch();
 
   const requestLogin = useCallback(() => {

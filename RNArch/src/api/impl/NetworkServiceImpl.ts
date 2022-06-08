@@ -1,4 +1,4 @@
-import {NetworkService} from 'api/NetworkService';
+import {NetworkService} from 'api/networkService';
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 import {baseURL, headers} from '../config';
 

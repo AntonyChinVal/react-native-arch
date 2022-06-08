@@ -1,5 +1,5 @@
 import {networkService} from 'api';
-import {AuthService, SigninParams} from 'services/AuthService';
+import {AuthService, SigninParams} from 'services/authService/authService';
 
 export class AuthServiceImpl implements AuthService {
   async signin(params: SigninParams): Promise<string> {
@@ -9,7 +9,7 @@ export class AuthServiceImpl implements AuthService {
         url: '/auth/signin',
         data: params,
       });
-      return response;
+      return response.data;
     } catch (e) {
       throw e;
     }

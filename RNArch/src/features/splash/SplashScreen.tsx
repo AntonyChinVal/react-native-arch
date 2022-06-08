@@ -1,5 +1,5 @@
-import {Route} from 'navigation/Routes';
-import {AppNavigationProp} from 'navigation/Types';
+import {Route} from 'navigation/routes';
+import {AppNavigationProp} from 'navigation/types';
 import React from 'react';
 import {useEffect} from 'react';
 import {StyleSheet, Text} from 'react-native';

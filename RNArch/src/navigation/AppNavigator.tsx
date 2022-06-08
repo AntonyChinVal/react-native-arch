@@ -1,8 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SplashScreen, LoginScreen} from 'features';
 import React from 'react';
-import {Route} from './Routes';
-import {AppStackParamList} from './Types';
+import {Route} from './routes';
+import {AppStackParamList} from './types';
 
 const AppStack = createNativeStackNavigator<AppStackParamList>();
 

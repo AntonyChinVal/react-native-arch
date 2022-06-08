@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {Route} from './Routes';
+import {Route} from './routes';
 
 export type AppStackParamList = {
   [Route.SPLASH]: undefined;

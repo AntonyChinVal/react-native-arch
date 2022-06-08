@@ -1,6 +1,6 @@
 import {networkService} from 'api';
 import {User} from 'entity/UserEntity';
-import {UserService} from 'services/UserService';
+import {UserService} from 'services/userService/userService';
 
 export class UserServiceImpl implements UserService {
   async getUser(): Promise<User> {

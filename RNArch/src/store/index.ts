@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
-import sessionReducer from 'features/session/sessionSlice';
+import sessionReducer from './session/sessionSlice';
 import createSagaMiddleware from 'redux-saga';
 import saga from './rootSaga';
 

@@ -1,3 +1,3 @@
-import {NetworkServiceImpl} from './impl/NetworkServiceImpl';
+import {NetworkServiceImpl} from './impl/networkServiceImpl';
 
 export const networkService = new NetworkServiceImpl();
