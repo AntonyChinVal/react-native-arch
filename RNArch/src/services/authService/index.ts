@@ -1,8 +1,8 @@
 import {networkService} from 'api';
-import {AuthService, SigninParams} from 'services/authService/authService';
+import {AuthService, SigningParams} from 'services/authService/authService';
 
 export class AuthServiceImpl implements AuthService {
-  async signin(params: SigninParams): Promise<string> {
+  async signing(params: SigningParams): Promise<string> {
     try {
       const response = await networkService.request<string>({
         method: 'POST',

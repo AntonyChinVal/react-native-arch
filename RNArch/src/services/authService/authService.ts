@@ -1,8 +1,8 @@
-export type SigninParams = {
+export type SigningParams = {
   username: string;
   password: string;
 };
 
 export interface AuthService {
-  signin(params: SigninParams): Promise<string>;
+  signing(params: SigningParams): Promise<string>;
 }

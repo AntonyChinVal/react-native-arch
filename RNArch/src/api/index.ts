@@ -9,12 +9,6 @@ class NetworkServiceImpl implements NetworkService {
     this.client = axios.create({baseURL, headers});
   }
 
-  setAccessToken(token: string): void {
-    this.client.defaults.headers.common.authorization = `Bearer ${token}`;
-  }
-  clearAccessToken(): void {
-    delete this.client.defaults.headers.common.authorization;
-  }
   request<T>(config: AxiosRequestConfig): Promise<AxiosResponse<T>> {
     return this.client.request<T>(config);
   }
