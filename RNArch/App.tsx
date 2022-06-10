@@ -4,6 +4,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
 import {store} from './src/store';
 import {RootNavigator} from './src/navigation';
+import 'reflect-metadata';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';

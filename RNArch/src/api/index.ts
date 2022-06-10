@@ -1,8 +1,10 @@
 import {NetworkService} from 'api/networkService';
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
+import {injectable} from 'inversify';
 import {baseURL, headers} from './config';
 
-class NetworkServiceImpl implements NetworkService {
+@injectable()
+export class NetworkServiceImpl implements NetworkService {
   client: AxiosInstance;
 
   constructor() {
