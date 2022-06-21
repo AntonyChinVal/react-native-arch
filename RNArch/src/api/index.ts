@@ -16,4 +16,5 @@ export class NetworkServiceImpl implements NetworkService {
   }
 }
 
-export const networkService = new NetworkServiceImpl();
+const networkService = new NetworkServiceImpl();
+export {networkService};

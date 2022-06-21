@@ -1,4 +1,4 @@
-export const AUTH_SERVICE_TYPE = 'AuthService';
+export const AUTH_SERVICE_TYPE = Symbol();
 
 export type SigningParams = {
   username: string;
