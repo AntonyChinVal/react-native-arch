@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-madge --circular ./RNArch/src
 cd RNArch && npx lint-staged && cd ..
