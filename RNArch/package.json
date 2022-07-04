@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky install"
+    "prepare": "cd .. && husky install front/.husky"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.6",
