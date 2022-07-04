@@ -1,6 +1,6 @@
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import {AppNavigator} from './AppNavigator';
+import { AppNavigator } from './AppNavigator';
 
 export function RootNavigator() {
   return (

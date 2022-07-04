@@ -1,15 +1,9 @@
-import React, {memo} from 'react';
-import {
-  StyleProp,
-  ViewStyle,
-  TouchableOpacity,
-  Text,
-  TextStyle,
-} from 'react-native';
+import React, { memo } from 'react';
+import { StyleProp, ViewStyle, TouchableOpacity, Text, TextStyle } from 'react-native';
 import styles from './styles';
 
 interface LinkProps {
-  children?: any;
+  children?: React.ReactNode;
   onPress?: () => void;
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
@@ -19,9 +13,7 @@ interface LinkProps {
 export const Link = (props: LinkProps) => {
   return (
     <TouchableOpacity style={props.style} onPress={props.onPress}>
-      <Text style={[styles.link, props.textStyle, {color: props.color}]}>
-        {props.children}
-      </Text>
+      <Text style={[styles.link, props.textStyle, { color: props.color }]}>{props.children}</Text>
     </TouchableOpacity>
   );
 };

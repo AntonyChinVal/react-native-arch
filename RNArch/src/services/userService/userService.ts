@@ -1,4 +1,4 @@
-import {User} from 'entity/userEntity';
+import { User } from 'entity/userEntity';
 
 export const USER_SERVICE_TYPE = Symbol();
 

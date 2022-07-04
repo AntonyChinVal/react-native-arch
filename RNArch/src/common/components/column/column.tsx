@@ -1,9 +1,9 @@
-import React, {memo} from 'react';
-import {StyleProp, View, ViewStyle} from 'react-native';
+import React, { memo } from 'react';
+import { StyleProp, View, ViewStyle } from 'react-native';
 import styles from './styles';
 
 interface ColumnProps {
-  children?: any;
+  children?: React.ReactNode;
   style?: StyleProp<ViewStyle>;
 }
 

@@ -1,0 +1,8 @@
+1 {
+  2   "*.{ts,tsx,js}": [
+  3     "yarn lint"
+  5   ],
+  6   "*.{json,md}": [
+  7     "prettier --write"
+  8   ]
+  9 }

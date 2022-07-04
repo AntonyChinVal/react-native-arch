@@ -1,9 +1,9 @@
 import React from 'react';
-import {StatusBar, useColorScheme} from 'react-native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Provider} from 'react-redux';
-import {store} from './src/store';
-import {RootNavigator} from './src/navigation';
+import { StatusBar, useColorScheme } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
+import { store } from './src/store';
+import { RootNavigator } from './src/navigation';
 import 'reflect-metadata';
 
 function App() {

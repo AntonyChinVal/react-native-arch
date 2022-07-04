@@ -1,4 +1,4 @@
-import {AxiosRequestConfig, AxiosResponse} from 'axios';
+import { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 export const NETWORK_SERVICE_TYPE = Symbol();
 

@@ -1,14 +1,14 @@
-import {NetworkService} from 'api/networkService';
-import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
-import {injectable} from 'inversify';
-import {baseURL, headers} from './config';
+import { NetworkService } from 'api/networkService';
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import { injectable } from 'inversify';
+import { baseURL, headers } from './config';
 
 @injectable()
 export class NetworkServiceImpl implements NetworkService {
   client: AxiosInstance;
 
   constructor() {
-    this.client = axios.create({baseURL, headers});
+    this.client = axios.create({ baseURL, headers });
   }
 
   request<T>(config: AxiosRequestConfig): Promise<AxiosResponse<T>> {
@@ -17,4 +17,4 @@ export class NetworkServiceImpl implements NetworkService {
 }
 
 const networkService = new NetworkServiceImpl();
-export {networkService};
+export { networkService };

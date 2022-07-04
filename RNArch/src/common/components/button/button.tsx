@@ -1,5 +1,5 @@
-import React, {memo} from 'react';
-import {Text, StyleProp, ViewStyle, TextStyle, Pressable} from 'react-native';
+import React, { memo } from 'react';
+import { Text, StyleProp, ViewStyle, TextStyle, Pressable } from 'react-native';
 import styles from './styles';
 
 export enum ButtonType {
@@ -8,7 +8,7 @@ export enum ButtonType {
 }
 
 interface ButtonProps {
-  children?: any;
+  children?: React.ReactNode;
   onPress?: () => void;
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
@@ -18,16 +18,16 @@ interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  var btnStyle: StyleProp<ViewStyle>;
-  var textStyle: StyleProp<TextStyle>;
+  let btnStyle: StyleProp<ViewStyle>;
+  let textStyle: StyleProp<TextStyle>;
   switch (props.type) {
     case ButtonType.NORMAL: {
-      btnStyle = {...styles.normalButton, backgroundColor: props.color};
+      btnStyle = { ...styles.normalButton, backgroundColor: props.color };
       break;
     }
     case ButtonType.OUTLINED: {
-      btnStyle = {...styles.outlinedButton, borderColor: props.color};
-      textStyle = {color: props.color};
+      btnStyle = { ...styles.outlinedButton, borderColor: props.color };
+      textStyle = { color: props.color };
       break;
     }
   }
@@ -35,16 +35,9 @@ const Button = (props: ButtonProps) => {
   return (
     <Pressable
       onPress={props.onPress}
-      style={[
-        btnStyle,
-        styles.button,
-        props.style,
-        props.disabled ? styles.buttonDisabled : {},
-      ]}
+      style={[btnStyle, styles.button, props.style, props.disabled ? styles.buttonDisabled : {}]}
       disabled={props.disabled}>
-      <Text style={[styles.text, textStyle, props.textStyle]}>
-        {props.children}
-      </Text>
+      <Text style={[styles.text, textStyle, props.textStyle]}>{props.children}</Text>
     </Pressable>
   );
 };
