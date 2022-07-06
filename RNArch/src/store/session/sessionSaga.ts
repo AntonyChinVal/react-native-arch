@@ -11,11 +11,10 @@ export function* requestLogin({ username, password }: RequestLoginAction) {
     const authService = container.get<AuthService>(AUTH_SERVICE_TYPE);
     const userService = container.get<UserService>(USER_SERVICE_TYPE);
     yield put(request());
-    const token: string = yield call(authService.signing, {
+    yield call(authService.signing, {
       username,
       password,
     });
-    console.log('Token', token);
     const user: User = yield call(userService.getUser);
     yield put(success(user));
   } catch (e) {

@@ -30,6 +30,7 @@
     "baseUrl": "src",
     "paths": {
       "api/*"  : ["api/*"],
+      "storage/*"  : ["storage/*"],
       "common/*"  : ["common/*"],
       "entity/*"  : ["entity/*"],
       "features/*"  : ["features/*"],

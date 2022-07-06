@@ -1,9 +1,7 @@
 import { NetworkService } from 'api/networkService';
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import { injectable } from 'inversify';
 import { baseURL, headers } from './config';
 
-@injectable()
 export class NetworkServiceImpl implements NetworkService {
   client: AxiosInstance;
 
@@ -13,6 +11,13 @@ export class NetworkServiceImpl implements NetworkService {
 
   request<T>(config: AxiosRequestConfig): Promise<AxiosResponse<T>> {
     return this.client.request<T>(config);
+  }
+  setAccessToken(token: string) {
+    this.client.defaults.headers.common.authorization = `Bearer ${token}`;
+  }
+
+  clearAccessToken() {
+    delete this.client.defaults.headers.common.authorization;
   }
 }
 

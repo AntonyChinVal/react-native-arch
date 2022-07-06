@@ -6,5 +6,5 @@ export type SigningParams = {
 };
 
 export interface AuthService {
-  signing(params: SigningParams): Promise<string>;
+  signing(params: SigningParams): Promise<void>;
 }

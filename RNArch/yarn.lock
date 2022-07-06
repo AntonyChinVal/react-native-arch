@@ -6145,6 +6145,11 @@ react-native-gradle-plugin@^0.0.6:
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz"
   integrity sha512-eIlgtsmDp1jLC24dRn43hB3kEcZVqx6DUQbR0N1ABXGnMEafm9I3V3dUUeD1vh+Dy5WqijSoEwLNUPLgu5zDMg==
 
+react-native-keychain@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-keychain/-/react-native-keychain-8.1.0.tgz#e19ba2dc87069311e434e5db5bcf81244dc9266f"
+  integrity sha512-MI5YKO8KKmaa2iBGFDiM/cdJ2E6MXaOIRLS1OyxAM9KP5tnpsLp6zowOAaeuc3nBLZ6D/J/EvZSBRggzSGnUGQ==
+
 react-native-safe-area-context@^4.3.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.3.0.tgz"
